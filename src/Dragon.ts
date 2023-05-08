@@ -1,10 +1,9 @@
 import Fighter, { SimpleFighter } from './Fighter';
+import Monster from './Monster';
 
-class Monster implements SimpleFighter {
-  constructor(
-    protected _lifePoints = 85,
-    protected readonly _strength = 63,
-  ) {
+class Dragon extends Monster {
+  constructor() {
+    super(999, 100);
   }
 
   get lifePoints(): number {
@@ -31,4 +30,4 @@ class Monster implements SimpleFighter {
   }
 }
 
-export default Monster;
+export default Dragon;
